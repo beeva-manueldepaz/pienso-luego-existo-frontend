@@ -6,6 +6,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('contact', { path: 'contactar' });
+  this.route('content/disclaimer');
 });
 
 export default Router;
