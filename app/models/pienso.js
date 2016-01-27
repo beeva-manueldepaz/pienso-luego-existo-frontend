@@ -6,5 +6,6 @@ export default DS.Model.extend({
   peso: DS.attr('number'),
   precio: DS.attr('number'),
   descripcion: DS.attr('string'),
-  fCaducidad:  DS.attr('date')
+  fCaducidad:  DS.attr('date'),
+  logo: DS.attr('string')
 });
