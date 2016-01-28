@@ -4,18 +4,20 @@
 <img src="{{pienso.logo}}" alt="Logo no disponible">
 <table class="table">
     <thead><th>Marca</th><th>Modelo</th><th>Peso</th><th>Precio</th><th>Descripción</th><th>F.Caducidad</th></thead>
-    <tr>
+
+      {{#each pienso key="id" as |p|}}
+      <tr>
         <td>
-          {{pienso.marca}}
+          {{p.marca}}
         </td>
         <td>
           {{pienso.modelo}}
         </td>
         <td>
-          {{pienso.peso}}
+          {{peso}}
         </td>
         <td>
-          {{pienso.precio}}
+          {{p}}
         </td>
         <td>
           {{pienso.descripcion}}
@@ -23,7 +25,9 @@
         <td>
           {{pienso.fCaducidad}}
         </td>
-    </tr>
+      </tr>
+    {{/each}}
+
 </table>
 
 <br>
