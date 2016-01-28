@@ -2,32 +2,29 @@
 <h3>Características del pienso:</h3>
 <br>
 <img src="{{pienso.logo}}" alt="Logo no disponible">
+
 <table class="table">
     <thead><th>Marca</th><th>Modelo</th><th>Peso</th><th>Precio</th><th>Descripción</th><th>F.Caducidad</th></thead>
-
-      {{#each pienso key="id" as |p|}}
       <tr>
         <td>
-          {{p.marca}}
+          {{model.marca}}
         </td>
         <td>
-          {{pienso.modelo}}
+          {{model.modelo}}
         </td>
         <td>
-          {{peso}}
+          {{model.peso}}
         </td>
         <td>
-          {{p}}
+          {{model.precio}}
         </td>
         <td>
-          {{pienso.descripcion}}
+          {{model.descripcion}}
         </td>
         <td>
-          {{pienso.fCaducidad}}
+          {{model.fCaducidad}}
         </td>
       </tr>
-    {{/each}}
-
 </table>
 
 <br>
