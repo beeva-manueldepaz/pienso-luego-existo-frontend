@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 
-App.Pienso = DS.Model.extend({
+export default DS.Model.extend({
   marca: DS.attr(),
   modelo: DS.attr(),
   peso: DS.attr(),
