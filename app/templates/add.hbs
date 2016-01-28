@@ -1,1 +1,15 @@
 {{outlet}}
+
+<br>
+<h3>Dar de alta un pienso</h3>
+<div id="add-form" class="form-class">
+	<form>
+		<p>Marca</p> {{input type="text" value=marca placeholder="Introduce la marca"}}
+		<p>Modelo</p> {{input type="text" value=modelo placeholder="Introduce el modelo"}}
+		<p>Peso</p> {{input type="text" value=peso placeholder="Introduce el peso"}}
+		<p>Precio</p> {{input type="text" value=precio placeholder="Introduce el precio"}}
+		<p>Descriṕción</p> {{input type="textarea" value=descriṕcion placeholder="Introduce una descripción" rows="4" cols="30"}}
+		<p>Fecha de caducidad</p> {{input type="text" value=fCaducidad placeholder="Introduce la fecha de caducidad"}}
+		<button {{action "submit"}}>Dar de alta</button>
+	</form>
+</div>
