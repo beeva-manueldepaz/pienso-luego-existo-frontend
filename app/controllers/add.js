@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  status: false,
+  message: '',
 	actions: {
       submit() {
         console.log(this.get('marca'));
@@ -10,10 +12,8 @@ export default Ember.Controller.extend({
         console.log(this.get('descriṕcion'));
         console.log(this.get('fCaducidad'));
         
-        var response = document.createElement('h4');
-        var textNode = document.createTextNode(`Has dado de alta el pienso ${this.marca} correctamente`);
-        response.appendChild(textNode);
-        this.set('response', response);
+        this.set('message', `Has dado de alta el pienso ${this.marca}`);
+        this.set('status', true);
       }
     }
 });

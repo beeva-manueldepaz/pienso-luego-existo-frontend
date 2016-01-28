@@ -2,6 +2,10 @@
 
 <br>
 <h3>Dar de alta un pienso</h3>
+
+{{#if status}}
+	<div class="mensaje">{{message}}</div>
+{{else}}
 <div id="add-form" class="form-class">
 	<form>
 		<p>Marca</p> {{input type="text" value=marca placeholder="Introduce la marca"}}
@@ -13,7 +17,4 @@
 		<button {{action "submit"}}>Dar de alta</button>
 	</form>
 </div>
-
-{{#if response}}
-	<div class="mensaje">{{response}}</div>
 {{/if}}
