@@ -26,13 +26,13 @@
           {{date-format pienso.fCaducidad}}
         </td>
         <td>
-            <li>{{#link-to "show" (query-params params=pienso.id)}}<i class="fa fa-hand-peace-o"></i>Mostrar{{/link-to}}</li>
+            <li>{{#link-to "show" pienso.id}}<i class="fa fa-hand-peace-o"></i>Mostrar{{/link-to}}</li>
         </td>
         <td>
             <li>{{#link-to "add"}}<i class="fa fa-hand-peace-o"></i>Añadir{{/link-to}}</li>
         </td>
         <td>
-            <li>{{#link-to "edit"}}<i class="fa fa-hand-peace-o"></i>Editar{{/link-to}}</li>
+            <li>{{#link-to "edit" pienso.id}}<i class="fa fa-hand-peace-o"></i>Editar{{/link-to}}</li>
         </td>
         <td>
             <li>{{#link-to "remove"}}<i class="fa fa-hand-peace-o"></i>Borrar{{/link-to}}</li>
