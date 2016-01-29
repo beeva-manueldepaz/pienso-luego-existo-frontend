@@ -23,7 +23,7 @@
           {{pienso.descripcion}}
         </td>
         <td>
-          {{pienso.fCaducidad}}
+          {{date-format pienso.fCaducidad}}
         </td>
         <td>
             <li>{{#link-to "show" (query-params params=pienso.id)}}<i class="fa fa-hand-peace-o"></i>Mostrar{{/link-to}}</li>
