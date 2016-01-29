@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('edit',{ path: 'edit/:id' });
   this.route('edit',{ path: 'edit' });
   this.route('remove');
+  this.route('showAll',{ path: '' });
 });
 
 export default Router;
