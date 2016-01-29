@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('contact', { path: 'contactar' });
   this.route('content/disclaimer');
   this.route('show',{ path: 'show/:id' });
+  this.route('show',{ path: 'show' });
   this.route('add');
   this.route('edit');
   this.route('remove');
