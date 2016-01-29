@@ -14,6 +14,7 @@
     "qunit": "~1.20.0",
     "bootstrap": "~3.3.5",
     "font-awesome": "~4.5.0",
-    "animate.css": "~3.5.1"
+    "animate.css": "~3.5.1",
+    "moment": "momentjs#^2.11.1"
   }
 }
