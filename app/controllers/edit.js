@@ -2,27 +2,33 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
-	marca: 'McPerris',
-	modelo: 'Plus',
-	peso: 20,
-	precio: 100,
-	descripcion: 'Para los más perros',
-	fCaducidad: '12/9/2016',
-
 	status: false,
-    message: '',
-
+  message: '',
 	actions: {
       submit() {
-        console.log(this.get('marca'));
-        console.log(this.get('modelo'));
-        console.log(this.get('peso'));
-        console.log(this.get('precio'));
-        console.log(this.get('descripcion'));
-        console.log(this.get('fCaducidad'));
+        //this.set('message', `Has actualizado el pienso ${this.marca} correctamente`);
+        //this.set('status', true);
+        console.log('Valores recibidos');
+        console.log(this.get('model.marca'));
+        console.log(this.get('model.modelo'));
+        console.log(this.get('model.peso'));
+        console.log(this.get('model.precio'));
+        console.log(this.get('model.descripcion'));
+        console.log(this.get('model.fCaducidad'));
 
-        this.set('message', `Has actualizado el pienso ${this.marca} correctamente`);
-        this.set('status', true);
+        var pienso = this.get('model.store').createRecord('pienso', {
+          marca: this.get('model.marca'),
+          modelo: this.get('model.modelo'),
+          peso: this.get('model.peso'),
+          precio: this.get('model.precio'),
+          descripcion: this.get('model.descripcion'),
+          fCaducidad: this.get('model.fcaducidad')
+        });
+
+        pienso.save().then(function(data) {
+          this.set('message', `Creando nuevo registro ${this.get('model.marca')}`);
+          this.set('status', true);
+        });
       }
   }
 });

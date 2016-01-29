@@ -1,4 +1,4 @@
-<h3>Modifica el pienso</h3>
+<h3>Actualiza el pienso</h3>
 
 {{#if status}}
 <div>{{message}}</div>
@@ -6,15 +6,15 @@
 <div id="add-form" class="form-class">
 	<form>
 		<div class="col-md-5">
-			<p>Marca</p> {{input type="text" value=marca placeholder="Introduce la marca"}}
-			<p>Modelo</p> {{input type="text" value=modelo placeholder="Introduce el modelo"}}
-			<p>Peso</p> {{input type="text" value=peso placeholder="Introduce el peso"}}
+			<p>Marca</p> {{input type="text" value=model.marca placeholder="Introduce la marca"}}
+			<p>Modelo</p> {{input type="text" value=model.modelo placeholder="Introduce el modelo"}}
+			<p>Peso</p> {{input type="text" value=model.peso placeholder="Introduce el peso"}}
 			<button {{action "submit"}}>Actualizar registro</button>
 		</div>
 		<div class="col-md-5">
-			<p>Precio</p> {{input type="text" value=precio placeholder="Introduce el precio"}}
-			<p>Descriṕción</p> {{input type="textarea" value=descripcion placeholder="Introduce una descripción" rows="4" cols="30"}}
-			<p>Fecha de caducidad</p> {{input type="text" value=fCaducidad placeholder="Introduce la fecha de caducidad"}}
+			<p>Precio</p> {{input type="text" value=model.precio placeholder="Introduce el precio"}}
+			<p>Descriṕción</p> {{input type="textarea" value=model.descripcion placeholder="Introduce una descripción" rows="4" cols="30"}}
+			<p>Fecha de caducidad</p> {{input type="text" value=(date-format model.fCaducidad) placeholder="Introduce la fecha de caducidad"}}
 		</div>
 	</form>
 </div>
